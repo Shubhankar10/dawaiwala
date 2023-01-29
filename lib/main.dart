@@ -1,3 +1,4 @@
+import 'package:dawaiwala/screens/auth_screens/login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,11 +10,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        fontFamily: 'SFPro',
       ),
-      home: HomePage(),
+      // home: HomePage(),
+      home: LoginScreen(),
     );
   }
 }
@@ -36,6 +38,7 @@ class HomePageState extends State<HomePage> {
           children: <Widget>[
             const Text(
               'You have pushed the button this many times:',
+              style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ],
         ),

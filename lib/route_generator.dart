@@ -1,15 +1,16 @@
+import 'package:dawaiwala/screens/auth_screens/signup.dart';
 import 'package:flutter/material.dart';
 
 import 'main.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
-    // Getting arguments passed in while alling Navigator.pushNamed
-    final args = settings.arguments;
 
     switch (settings.name) {
       case 'home':
         return MaterialPageRoute(builder: (_) => HomePage());
+      case '/signUp':
+        return MaterialPageRoute(builder: (_) => SignUpScreen());
       default:
         return _errorRoute();
     }
