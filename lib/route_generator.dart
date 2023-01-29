@@ -6,11 +6,9 @@ import 'main.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
-
     switch (settings.name) {
       case 'home':
         return MaterialPageRoute(builder: (_) => SplashScreen());
-        return MaterialPageRoute(builder: (_) => HomePage());
       case '/signUp':
         return MaterialPageRoute(builder: (_) => SignUpScreen());
       default:
