@@ -1,4 +1,3 @@
-import 'package:dawaiwala/screens/auth_screens/login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,7 +9,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'DavaiVala',
       theme: ThemeData(
+        scaffoldBackgroundColor: Colors.transparent,
+        appBarTheme: const AppBarTheme(backgroundColor: Colors.transparent),
         primarySwatch: Colors.blue,
         fontFamily: 'SFPro',
       ),
@@ -43,6 +46,7 @@ class HomePageState extends State<HomePage> {
           ],
         ),
       ),// This trailing comma makes auto-formatting nicer for build methods.
+      home: const SplashScreen(),
     );
   }
 }
