@@ -1,3 +1,4 @@
+import 'package:dawaiwala/screens/auth_screens/login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,34 +20,6 @@ class MyApp extends StatelessWidget {
       ),
       // home: HomePage(),
       home: LoginScreen(),
-    );
-  }
-}
-
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
-
-  @override
-  State<HomePage> createState() => HomePageState();
-}
-
-class HomePageState extends State<HomePage> {
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-          ],
-        ),
-      ),// This trailing comma makes auto-formatting nicer for build methods.
-      home: const SplashScreen(),
     );
   }
 }
