@@ -1,6 +1,5 @@
+import 'package:dawaiwala/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
-
-import 'main.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -9,7 +8,7 @@ class RouteGenerator {
 
     switch (settings.name) {
       case 'home':
-        return MaterialPageRoute(builder: (_) => HomePage());
+        return MaterialPageRoute(builder: (_) => SplashScreen());
       default:
         return _errorRoute();
     }
