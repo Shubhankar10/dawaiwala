@@ -1,4 +1,5 @@
 import 'package:dawaiwala/screens/auth_screens/login.dart';
+import 'package:dawaiwala/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,8 +19,36 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'SFPro',
       ),
-      // home: HomePage(),
+      // home: Dashboard(),
       home: LoginScreen(),
+    );
+  }
+}
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => HomePageState();
+}
+
+class HomePageState extends State<HomePage> {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            const Text(
+              'You have pushed the button this many times:',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
+      ),
+      // home: const SplashScreen(),
     );
   }
 }
