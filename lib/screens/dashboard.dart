@@ -14,12 +14,10 @@ class Dashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     var controller = Get.put(HomeController());
     var navBarItem = [
-      BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-      BottomNavigationBarItem(
-          icon: Icon(Icons.medical_information_outlined), label: "History"),
-      BottomNavigationBarItem(icon: Icon(Icons.calendar_month), label: "Deals"),
-      BottomNavigationBarItem(
-          icon: Icon(Icons.account_circle_outlined), label: "Profile"),
+      BottomNavigationBarItem(icon: Image.asset(icHome), label: "Home"),
+      BottomNavigationBarItem(icon: Image.asset(icHistory), label: "History"),
+      BottomNavigationBarItem(icon: Image.asset(icDeals), label: "Deals"),
+      BottomNavigationBarItem(icon: Image.asset(icProfile), label: "Profile"),
     ];
     var navBody = [
       HomeScreen(),

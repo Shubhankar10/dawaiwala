@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+const Color primaryColor = Color(0xff0065ff);
+const Color primaryDarkColor = Color(0xff0f3d91);
 const Color textfieldGrey = Color.fromRGBO(209, 209, 209, 1);
 const Color fontGrey = Color.fromRGBO(107, 115, 119, 1);
 const Color darkFontGrey = Color.fromRGBO(62, 68, 71, 1);
