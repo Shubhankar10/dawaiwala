@@ -1,4 +1,5 @@
 import 'package:dawaiwala/screens/auth_screens/signup.dart';
+import 'package:dawaiwala/screens/auth_screens/verify.dart';
 import 'package:dawaiwala/screens/dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
@@ -103,7 +104,7 @@ class LoginScreen extends StatelessWidget {
                 onPressed: () => {
                   verify(context),
                   Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (context) => Dashboard()))
+                      .push(MaterialPageRoute(builder: (context) => VerifyOtp()))
                 },
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Color(0xff1870B5),
