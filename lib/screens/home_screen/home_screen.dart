@@ -1,6 +1,8 @@
 import 'package:dawaiwala/consts/colors.dart';
 import 'package:dawaiwala/consts/images.dart';
+import 'package:dawaiwala/screens/search_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -8,6 +10,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var searchController = TextEditingController();
     const sliderList = [icCoupon, icBrands, icClubpoint, icFlashDeal];
 
     return SingleChildScrollView(
@@ -55,11 +58,18 @@ class HomeScreen extends StatelessWidget {
                             )),
                       ),
                       TextFormField(
+                        controller: searchController,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(80.0),
                           ),
-                          suffixIcon: const Icon(Icons.search),
+                          suffixIcon: const Icon(Icons.search).onTap(() {
+                            if (searchController.text.isNotEmptyAndNotNull) {
+                              Get.to(() => SearchScreen(
+                                    title: searchController.text,
+                                  ));
+                            }
+                          }),
                           filled: true,
                           fillColor: Colors.white,
                         ),
