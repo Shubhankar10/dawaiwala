@@ -1,6 +1,6 @@
 import 'package:dawaiwala/consts/consts.dart';
 import 'package:dawaiwala/controllers/home_controller.dart';
-import 'package:dawaiwala/screens/deals_screen/deals_screen.dart';
+import 'package:dawaiwala/screens/cart_screen/cart_screen.dart';
 import 'package:dawaiwala/screens/history_screen/history_screen.dart';
 import 'package:dawaiwala/screens/home_screen/home_screen.dart';
 import 'package:dawaiwala/screens/profile_screen/profile_screen.dart';
@@ -14,16 +14,20 @@ class Dashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     var controller = Get.put(HomeController());
     var navBarItem = [
-      BottomNavigationBarItem(icon: Image.asset(icHome), label: "Home"),
-      BottomNavigationBarItem(icon: Image.asset(icHistory), label: "History"),
-      BottomNavigationBarItem(icon: Image.asset(icDeals), label: "Deals"),
-      BottomNavigationBarItem(icon: Image.asset(icProfile), label: "Profile"),
+      const BottomNavigationBarItem(
+          icon: Icon(Icons.home_outlined), label: "Home"),
+      const BottomNavigationBarItem(
+          icon: Icon(Icons.history_toggle_off_outlined), label: "History"),
+      const BottomNavigationBarItem(
+          icon: Icon(Icons.shopping_cart_outlined), label: "Cart"),
+      const BottomNavigationBarItem(
+          icon: Icon(Icons.account_circle_outlined), label: "Profile"),
     ];
     var navBody = [
-      HomeScreen(),
-      HistoryScreen(),
-      DealsScreen(),
-      ProfileScreen()
+      const HomeScreen(),
+      const HistoryScreen(),
+      const CartScreen(),
+      const ProfileScreen()
     ];
 
     return Scaffold(
