@@ -21,16 +21,18 @@ class LoginScreen extends StatelessWidget {
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
               colors: [
-                Color(0xff1870B5),
-                Color(0xff1870B5),
-                Colors.white
+                Colors.black,
+                Colors.black,
+                // Color(0xff01A1B9),
+                // Color(0xff01A1B9),
+                // Color(0xff66D731),
           ])
         ),
         child: SlidingUpPanel(
           panel: Column(children: [
             Padding(
               padding: EdgeInsets.only(
-                  top: MediaQuery.of(context).size.height * 0.05,
+                  top: MediaQuery.of(context).size.height * 0.09,
                   right: 30,
                   left: 30),
               child: const Text(
@@ -66,20 +68,6 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(
-                  top: MediaQuery.of(context).size.height * 0.04,
-                  right: 30,
-                  left: 30),
-              child: TextFormField(
-                // controller: emailController,
-                decoration: InputDecoration(
-                  border:
-                      OutlineInputBorder(borderRadius: BorderRadius.circular(50)),
-                  labelText: "Password",
-                ),
-              ),
-            ),
-            Padding(
                 padding: EdgeInsets.only(
                     top: MediaQuery.of(context).size.height * 0.04,
                     right: 30,
@@ -97,7 +85,7 @@ class LoginScreen extends StatelessWidget {
                 )),
             Padding(
               padding: EdgeInsets.only(
-                  top: MediaQuery.of(context).size.height * 0.15,
+                  top: MediaQuery.of(context).size.height * 0.25,
                   right: 20,
                   left: 20),
               child: ElevatedButton(
@@ -143,7 +131,7 @@ class LoginScreen extends StatelessWidget {
                 topLeft: Radius.circular(25),
                 topRight: Radius.circular(25),
               ),
-              color: Color(0xff4599dc),
+              color:Color(0xff01A1B9),
             ),
             child: const Center(
               child: Text(
@@ -154,12 +142,30 @@ class LoginScreen extends StatelessWidget {
           ),
           body: Center(
             child:
-            Align(
-                alignment: Alignment.center,
-                child: Image.asset('assets/icons/davaivala_logo.png')
-            ),
+                Column(
+                  children: [
+                  Padding(
+                    padding: EdgeInsets.only(
+                      top:  MediaQuery.of(context).size.height * 0.04,
+                    ),
+                    child:
+                      Image.asset('assets/icons/davaivala_logo.png',
+                            height: 80,
+                      ),
+                ),
+                    Padding(
+                        padding: EdgeInsets.only(
+                          top: MediaQuery.of(context).size.height * 0.3,
+                        ),
+                        child: Image.asset('assets/icons/davaivala_full_logo.png',
+                          height: 100,)
+                    ),
+                  ],
+                )
+
 
           ),
+
           maxHeight: 700,
           minHeight: 100,
           borderRadius: const BorderRadius.only(

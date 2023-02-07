@@ -12,7 +12,7 @@ class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff1870B5),
+      backgroundColor: Colors.black,
       body: Container(
         child:
         SlidingUpPanel(
@@ -21,7 +21,7 @@ class SignUpScreen extends StatelessWidget {
                 children: [
                   Padding(
                     padding: EdgeInsets.only(
-                      top: MediaQuery.of(context).size.height * 0.04,
+                      top: MediaQuery.of(context).size.height * 0.1,
                     ),
                     child: Text("Sign Up",
                       style: TextStyle(color: Colors.black, fontSize: 40),
@@ -80,45 +80,10 @@ class SignUpScreen extends StatelessWidget {
                     ),
                   ),
 
-                  Padding(
-                    padding: EdgeInsets.only(
-                        top: MediaQuery.of(context).size.height * 0.03,
-                        right: 30,
-                        left: 30
-                    ),
-                    child:
-                    TextField(
-                      // controller: passwordController,
-                      obscureText: true,
-                      decoration: InputDecoration(
-                        border:
-                        OutlineInputBorder(borderRadius: BorderRadius.circular(50)),
-                        labelText: "Password",
-                      ),
-                    ),
-                  ),
 
                   Padding(
                     padding: EdgeInsets.only(
-                        top: MediaQuery.of(context).size.height * 0.03,
-                        right: 30,
-                        left: 30
-                    ),
-                    child:
-                    TextFormField(
-                      // controller: cnfPasswordController,
-                      obscureText: true,
-                      decoration: InputDecoration(
-                        border:
-                        OutlineInputBorder(borderRadius: BorderRadius.circular(50)),
-                        labelText: "Confirm Password",
-                      ),
-                    ),
-                  ),
-
-                  Padding(
-                    padding: EdgeInsets.only(
-                      top: MediaQuery.of(context).size.height * 0.06,
+                      top: MediaQuery.of(context).size.height * 0.20,
                     ),
                     child:
                     ElevatedButton(

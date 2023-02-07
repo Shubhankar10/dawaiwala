@@ -9,7 +9,7 @@ class VerifyOtp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff1870B5),
+      backgroundColor: Colors.black,
       body: Container(
     child:
       SlidingUpPanel(
